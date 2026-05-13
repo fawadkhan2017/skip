@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SKIP - Customer Details</title>
+    <meta name="description" content="Enter your pickup information.">
+
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react@18/umd/react.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://resource.trickle.so/vendor_lib/unpkg/lucide-static@0.516.0/font/lucide.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <style type="text/tailwindcss">
+    @layer theme {
+        :root {
+            --primary: #FFD200;
+            --primary-hover: #E5BD00;
+            --bg-off-white: #FAFAFA;
+            --text-main: #000000;
+            --text-gray: #4B5563;
+        }
+    }
+    @layer base {
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-main);
+            background-color: var(--bg-off-white);
+            -webkit-font-smoothing: antialiased;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel" src="components/checkout/CheckoutHeader.js"></script>
+    <script type="text/babel" src="components/checkout/ProgressBar.js"></script>
+    <script type="text/babel" src="components/checkout/OrderSummary.js"></script>
+    <script type="text/babel" src="components/checkout/DetailsForm.js"></script>
+    <script type="text/babel" src="details-app.js"></script>
+</body>
+</html>
