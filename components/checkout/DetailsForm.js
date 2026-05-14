@@ -1,6 +1,6 @@
 function DetailsForm() {
     return (
-        <div className="bg-white rounded-3xl p-8 lg:p-10 shadow-sm border border-gray-100 flex-1">
+        <div className="bg-white rounded-3xl p-8 lg:p-10 shadow-sm border border-gray-200 flex-1">
             <h1 className="text-3xl font-bold mb-2">Pickup information.</h1>
             <p className="text-gray-500 mb-8">Where should we pick up? Takes about 60 seconds.</p>
 

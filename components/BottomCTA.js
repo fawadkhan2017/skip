@@ -1,6 +1,6 @@
 const BottomCTA = () => {
     return (
-        <section className="py-24 bg-[var(--primary)] text-center text-black">
+        <section className="py-[50px] bg-[var(--primary)] text-center text-black">
             <div className="max-w-4xl mx-auto px-6">
                 <h2 className="text-4xl md:text-6xl font-black mb-6 tracking-tight leading-tight">
                     Ready to get started with<br/>laundry delivery service?

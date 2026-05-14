@@ -13,8 +13,8 @@ function FooterBanner() {
                     </p>
                     
                     <div className="flex items-center justify-center gap-3 mb-10">
-                        <div className="w-10 h-10 rounded-full bg-black flex items-center justify-center">
-                            <div className="icon-users text-xl text-white"></div>
+                        <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-sm">
+                            <div className="icon-users text-xl text-black"></div>
                         </div>
                         <div className="text-left leading-tight">
                             <p className="font-bold text-sm text-black">The Skip Team</p>

@@ -4,7 +4,7 @@ const BagCapacity = () => {
             {/* Background Image */}
             <div className="absolute inset-0 z-0">
                 <img 
-                    src="https://images.unsplash.com/photo-1582735689369-4fe89db7114c?auto=format&fit=crop&q=80" 
+                    src="https://app.trickle.so/storage/public/images/usr_1f209b0398000001/9eb86147-ecec-401a-9c09-96d43319c2c6.png" 
                     alt="Laundry bags"
                     className="w-full h-full object-cover opacity-60"
                 />

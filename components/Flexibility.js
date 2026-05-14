@@ -1,6 +1,6 @@
 const Flexibility = () => {
     return (
-        <section className="py-24 bg-[#FAFAFA]" data-name="Flexibility" data-file="components/Flexibility.js">
+        <section data-name="Flexibility" data-file="components/Flexibility.js" className="py-24 bg-[#FAFAFA]">
             <div className="max-w-4xl mx-auto px-6">
                 <div className="text-center mb-12">
                     <p className="text-[14px] font-bold tracking-widest uppercase mb-4">ON YOUR TERMS</p>

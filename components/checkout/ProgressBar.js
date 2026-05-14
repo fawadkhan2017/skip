@@ -6,8 +6,8 @@ function ProgressBar({ currentStep }) {
     ];
 
     return (
-        <div className="bg-white border-b border-gray-100">
-            <div className="max-w-[1300px] mx-auto px-8 py-6">
+        <div className="border-b border-gray-100">
+            <div className="max-w-[1300px] mx-auto px-8 md:px-12 py-6">
                 <div className="flex items-center justify-between">
                     <div className="flex items-center">
                         {steps.map((step, index) => (

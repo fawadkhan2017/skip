@@ -1,14 +1,8 @@
 function OrderSummary() {
-    const MiniBag = () => (
-        <svg viewBox="0 0 100 130" className="w-[18px] h-auto drop-shadow-sm" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M25 25 C 10 50, 5 80, 10 120 C 15 130, 85 130, 90 120 C 95 80, 90 50, 75 25 C 70 10, 65 5, 50 5 C 35 5, 30 10, 25 25 Z" fill="#FFD200"/>
-            <path d="M25 25 C 40 30, 60 30, 75 25" stroke="#E5BD00" strokeWidth="3" strokeLinecap="round"/>
-            <text x="50" y="70" fill="#ffffff" fontSize="26" fontWeight="900" fontFamily="Inter, sans-serif" textAnchor="middle" transform="rotate(-90 50 70)" opacity="0.9">SKIP</text>
-        </svg>
-    );
+    const bagImage = "https://app.trickle.so/storage/public/images/usr_1f209b0398000001/ca14b966-e026-413b-a232-65a3dead6bd2.png";
 
     return (
-        <div className="bg-white rounded-[24px] shadow-sm px-7 pb-7 pt-9 lg:w-[380px] self-start sticky top-6 border border-gray-100 flex-shrink-0 relative overflow-hidden">
+        <div className="bg-white rounded-[24px] shadow-sm px-7 pb-7 pt-9 lg:w-[380px] self-start sticky top-6 border border-gray-200 flex-shrink-0 relative overflow-hidden">
             <div className="absolute top-0 left-0 right-0 h-3 bg-black"></div>
             <h2 className="text-[19px] font-bold mb-5 flex items-center tracking-tight text-gray-900">
                 <div className="w-7 h-7 rounded-full bg-gray-100 flex items-center justify-center mr-3">
@@ -20,9 +14,9 @@ function OrderSummary() {
             <div className="border border-gray-300 rounded-[16px] p-5 mb-5 shadow-sm">
                 <div className="flex items-start mb-4">
                     <div className="flex space-x-0 mr-4 bg-[#FCFBEB] px-2 py-1.5 rounded-lg border border-yellow-100 relative items-center justify-center min-w-[70px]">
-                        <MiniBag />
-                        <MiniBag className="-ml-2" />
-                        <MiniBag className="-ml-2" />
+                        <img src={bagImage} className="w-5 h-auto drop-shadow-sm object-contain" alt="Bag" />
+                        <img src={bagImage} className="w-5 h-auto drop-shadow-sm object-contain -ml-2.5 z-10" alt="Bag" />
+                        <img src={bagImage} className="w-5 h-auto drop-shadow-sm object-contain -ml-2.5 z-20" alt="Bag" />
                     </div>
                     <div>
                         <h3 className="font-bold text-[14px] leading-tight text-gray-900">The Full House Plan</h3>

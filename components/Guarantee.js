@@ -1,13 +1,13 @@
 const Guarantee = () => {
     return (
-        <section className="py-24 bg-black text-white">
+        <section className="py-[50px] bg-black text-white">
             <div className="max-w-4xl mx-auto px-6 text-center">
-                <div className="flex justify-center text-[var(--primary)] text-2xl mb-8 space-x-2">
-                    <i className="icon-star fill-current"></i>
-                    <i className="icon-star fill-current"></i>
-                    <i className="icon-star fill-current"></i>
-                    <i className="icon-star fill-current"></i>
-                    <i className="icon-star fill-current"></i>
+                <div className="flex justify-center text-[var(--primary)] text-3xl mb-8 space-x-2">
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
                 </div>
                 
                 <h2 className="text-3xl md:text-5xl font-black mb-8 tracking-tight">

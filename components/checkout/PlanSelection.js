@@ -2,17 +2,10 @@ function PlanSelection() {
     const [frequency, setFrequency] = React.useState('weekly');
     const [billing, setBilling] = React.useState('monthly');
 
-    const BagIcon = ({ className }) => (
-        <svg viewBox="0 0 100 130" className={`drop-shadow-sm ${className}`} fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M25 25 C 10 50, 5 80, 10 120 C 15 130, 85 130, 90 120 C 95 80, 90 50, 75 25 C 70 10, 65 5, 50 5 C 35 5, 30 10, 25 25 Z" fill="#FFD200"/>
-            <path d="M25 25 C 40 30, 60 30, 75 25" stroke="#E5BD00" strokeWidth="3" strokeLinecap="round"/>
-            <path d="M22 28 C 40 33, 60 33, 78 28" stroke="#E5BD00" strokeWidth="2" strokeLinecap="round" opacity="0.6"/>
-            <text x="50" y="70" fill="#ffffff" fontSize="24" fontWeight="900" fontFamily="Inter, sans-serif" textAnchor="middle" transform="rotate(-90 50 70)" opacity="0.95" letterSpacing="1">SKIP</text>
-        </svg>
-    );
+    const bagImage = "https://app.trickle.so/storage/public/images/usr_1f209b0398000001/ca14b966-e026-413b-a232-65a3dead6bd2.png";
 
     return (
-        <div style={{"paddingTop":"40px","paddingRight":"26px","paddingBottom":"40px","paddingLeft":"26px","marginTop":"0px","marginRight":"0px","marginBottom":"0px","marginLeft":"0px","fontSize":"16px","color":"rgb(0, 0, 0)","backgroundColor":"rgb(255, 255, 255)","textAlign":"start","fontWeight":"400","objectFit":"fill","display":"block","position":"static","top":"auto","left":"auto","right":"auto","bottom":"auto"}} className="bg-white rounded-[24px] p-8 lg:p-10 shadow-sm flex-1">
+        <div className="bg-white rounded-[24px] p-8 lg:p-10 shadow-sm flex-1 border border-gray-200">
             <h1 className="text-[32px] font-bold mb-1 tracking-tight text-left">Build your plan.</h1>
             <p className="text-gray-500 text-[14px] mb-8 text-left">Choose your weekly plan & billing <span className="mx-1">•</span> <span className="text-gray-400">★</span> Trusted by 1000's of NJ + NYC Households</p>
 
@@ -20,7 +13,7 @@ function PlanSelection() {
                 {/* Plan 1 */}
                 <div className="border border-gray-200 rounded-[16px] p-6 pt-8 text-center flex flex-col h-full bg-white">
                     <div className="h-24 mb-4 flex items-center justify-center">
-                        <BagIcon className="w-[70px] h-auto" />
+                        <img src={bagImage} alt="1 Bag" className="w-[60px] h-auto drop-shadow-sm object-contain" />
                     </div>
                     <h3 className="text-[19px] font-bold mb-2">The Essentials</h3>
                     <p className="text-[11px] text-gray-500 mb-4 h-12 leading-relaxed">1 bag (16 lbs)<br/>Just enough to get by or light weekly loads.</p>
@@ -35,8 +28,8 @@ function PlanSelection() {
                     </div>
                     <div className="p-4 flex-1 flex flex-col pt-4">
                         <div className="h-24 mb-4 flex items-center justify-center relative">
-                            <BagIcon className="w-[70px] h-auto absolute -ml-10" />
-                            <BagIcon className="w-[70px] h-auto absolute ml-10" />
+                            <img src={bagImage} alt="Bag" className="w-[60px] h-auto absolute -ml-10 drop-shadow-sm object-contain z-0" />
+                            <img src={bagImage} alt="Bag" className="w-[60px] h-auto absolute ml-10 drop-shadow-sm object-contain z-10" />
                         </div>
                         <h3 className="text-[19px] font-bold mb-2">The Double-Up</h3>
                         <p className="text-[11px] text-gray-500 mb-4 h-12 leading-relaxed">2 bags (32 lbs)<br/>Ideal for couples & gym-goers. Most<br/>households choose this.</p>
@@ -52,9 +45,9 @@ function PlanSelection() {
                     </div>
                     <div className="flex-1 flex flex-col">
                         <div className="h-24 mb-4 flex items-center justify-center relative">
-                            <BagIcon className="w-[70px] h-auto absolute -ml-16" />
-                            <BagIcon className="w-[70px] h-auto absolute z-10" />
-                            <BagIcon className="w-[70px] h-auto absolute ml-16" />
+                            <img src={bagImage} alt="Bag" className="w-[60px] h-auto absolute -ml-16 drop-shadow-sm object-contain z-0" />
+                            <img src={bagImage} alt="Bag" className="w-[60px] h-auto absolute z-10 drop-shadow-sm object-contain" />
+                            <img src={bagImage} alt="Bag" className="w-[60px] h-auto absolute ml-16 drop-shadow-sm object-contain z-0" />
                         </div>
                         <h3 className="text-[19px] font-bold mb-2">The Full House</h3>
                         <p className="text-[11px] text-gray-500 mb-4 h-12 leading-relaxed">3 bags (48 lbs)<br/>Perfect for large households. Never run out<br/>of clean clothes</p>

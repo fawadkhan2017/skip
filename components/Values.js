@@ -28,7 +28,7 @@ function Values() {
         ];
 
         return (
-            <section className="py-24 bg-[var(--bg-off-white)]" data-name="values" data-file="components/Values.js">
+            <section data-name="values" data-file="components/Values.js" style={{"paddingTop":"50px","paddingRight":"0px","paddingBottom":"50px","paddingLeft":"0px","marginTop":"0px","marginRight":"0px","marginBottom":"0px","marginLeft":"0px","fontSize":"16px","color":"rgb(0, 0, 0)","backgroundColor":"lightyellow","textAlign":"start","fontWeight":"400","objectFit":"fill","display":"block","position":"static","top":"auto","left":"auto","right":"auto","bottom":"auto"}} className="py-24">
                 <div className="container-custom">
                     <div className="text-center mb-16">
                         <p className="text-[#ECAE00] font-semibold text-lg mb-2">What We Stand For</p>

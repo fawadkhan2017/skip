@@ -1,7 +1,7 @@
 function Problem() {
     try {
         return (
-            <section className="py-24 bg-white text-center" data-name="problem" data-file="components/Problem.js">
+            <section data-name="problem" data-file="components/Problem.js" style={{"paddingTop":"50px","paddingRight":"0px","paddingBottom":"50px","paddingLeft":"0px","marginTop":"0px","marginRight":"0px","marginBottom":"0px","marginLeft":"0px","fontSize":"16px","color":"rgb(0, 0, 0)","backgroundColor":"rgb(255, 255, 255)","textAlign":"center","fontWeight":"400","objectFit":"fill","display":"block","position":"static","top":"auto","left":"auto","right":"auto","bottom":"auto"}} className="pt-40 pb-24 bg-white text-center">
                 <div className="container-custom max-w-3xl">
                     <p className="text-[22px] mb-4 font-normal text-gray-800">Sound familiar?</p>
                     <h2 className="text-5xl md:text-7xl font-black mb-8 tracking-tight leading-[1.1]">

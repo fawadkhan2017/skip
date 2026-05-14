@@ -1,64 +1,74 @@
-const HowItWorks = () => {
+function HowItWorks() {
+    const steps = [
+        {
+            id: 1,
+            icon: 'icon-search',
+            title: 'We inspect your clothes and check your pockets',
+            description: 'We do "pocket inspections" for you so nothing ends up in the wash that shouldn\'t. All pockets and clothes are inspected before being washed.'
+        },
+        {
+            id: 2,
+            icon: 'icon-washing-machine',
+            title: 'We wash your items with extra care',
+            description: 'Your lights and darks are separated and all your clothes are washed using cold water to preserve color (and save energy).'
+        },
+        {
+            id: 3,
+            icon: 'icon-sparkles',
+            title: 'Tons of extras included at no extra charge',
+            description: 'Free hypoallergenic detergent, stain treatment, and evening delivery—everything included, at no added cost.'
+        },
+        {
+            id: 4,
+            icon: 'icon-shirt',
+            title: 'We fold everything so that you don\'t have to',
+            description: 'Your clothes are crisply folded, and your socks are paired, ready to be worn or put away when we deliver your clothes to your door!'
+        }
+    ];
+
     return (
-        <section className="py-24 bg-white" data-name="HowItWorks" data-file="components/HowItWorks.js">
-            <div className="container-custom text-center">
-                <p className="font-bold text-[15px] mb-3 tracking-wide">Ridiculously easy</p>
-                <h2 className="text-5xl md:text-6xl font-black tracking-tight mb-16">
-                    Three steps. Zero laundry.
-                </h2>
+        <section data-name="HowItWorks" data-file="components/HowItWorks.js" style={{"paddingTop":"50px","paddingRight":"0px","paddingBottom":"50px","paddingLeft":"0px","marginTop":"0px","marginRight":"0px","marginBottom":"0px","marginLeft":"0px","fontSize":"16px","color":"rgb(0, 0, 0)","backgroundColor":"white","textAlign":"start","fontWeight":"400","objectFit":"fill","display":"block","position":"static","top":"auto","left":"auto","right":"auto","bottom":"auto"}} className="py-24 bg-white">
+            <div className="container-custom">
+                <div className="text-center max-w-3xl mx-auto mb-16">
+                    <h2 className="text-4xl md:text-5xl font-black mb-6 tracking-tight">How it works</h2>
+                    <p className="text-[19px] text-gray-800 leading-relaxed font-normal">
+                        Skip will pick up your laundry, wash it according to best practices and your preferences, and deliver it back neatly folded—right to your door.
+                    </p>
+                </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16 max-w-5xl mx-auto">
-                    {/* Step 1 */}
-                    <div className="flex flex-col items-center">
-                        <div className="w-24 h-24 rounded-full border border-gray-200 flex items-center justify-center mb-6 relative">
-                            <i className="icon-wand-sparkles text-4xl text-black"></i>
-                            <div className="absolute -top-2 -right-2 w-8 h-8 bg-[var(--primary)] rounded-full flex items-center justify-center font-bold text-lg">1</div>
+                <div className="relative max-w-6xl mx-auto mb-16">
+                    {/* Connecting arrows for desktop */}
+                    <div className="hidden lg:block absolute top-[28px] left-[15%] right-[15%] h-[1px] z-0">
+                        <div className="w-full flex justify-between px-12">
+                            <div className="icon-arrow-right text-gray-300 text-xl transform translate-x-4"></div>
+                            <div className="icon-arrow-right text-gray-300 text-xl transform translate-x-4"></div>
+                            <div className="icon-arrow-right text-gray-300 text-xl transform translate-x-4"></div>
                         </div>
-                        <h3 className="text-xl font-bold mb-3">Choose A Plan</h3>
-                        <p className="text-gray-600 leading-relaxed px-4">
-                            Weekly plans built around your lifestyle—no matter how much laundry you have. More time back, every week.
-                        </p>
+                        {/* Gray lines connecting the spaces */}
+                        <div className="absolute top-1/2 left-0 right-0 h-[1px] bg-gray-200 -z-10"></div>
                     </div>
 
-                    {/* Step 2 */}
-                    <div className="flex flex-col items-center">
-                        <div className="w-24 h-24 rounded-full border border-gray-200 flex items-center justify-center mb-6 relative bg-[var(--primary)]/10">
-                            <i className="icon-map-pin text-4xl text-black"></i>
-                            <div className="absolute -top-2 -right-2 w-8 h-8 bg-[var(--primary)] rounded-full flex items-center justify-center font-bold text-lg">2</div>
-                        </div>
-                        <h3 className="text-xl font-bold mb-3">Fill Your Bag</h3>
-                        <p className="text-gray-600 leading-relaxed px-4">
-                            Fill your bag with everyday clothes and towels. First order? Use a kitchen trash bag—we'll return it in your free Skip duffel.
-                        </p>
-                    </div>
-
-                    {/* Step 3 */}
-                    <div className="flex flex-col items-center">
-                        <div className="w-24 h-24 rounded-full border border-gray-200 flex items-center justify-center mb-6 relative">
-                            <i className="icon-check text-4xl text-black"></i>
-                            <div className="absolute -top-2 -right-2 w-8 h-8 bg-[var(--primary)] rounded-full flex items-center justify-center font-bold text-lg">3</div>
-                        </div>
-                        <h3 className="text-xl font-bold mb-3">Fresh Clothes, Delivered</h3>
-                        <p className="text-gray-600 leading-relaxed px-4">
-                            Next day, your clothes arrive at your door—fresh, crisply folded, socks paired, and ready to put away.
-                        </p>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10">
+                        {steps.map((step, index) => (
+                            <div key={step.id} className="flex flex-col items-start lg:items-center text-left lg:text-center">
+                                <div className="w-14 h-14 rounded-xl border-2 border-[var(--primary)] flex items-center justify-center bg-white mb-6 lg:mx-auto relative z-10 shadow-sm">
+                                    <div className={`${step.icon} text-xl text-black font-bold`}></div>
+                                </div>
+                                <h3 className="text-lg font-bold mb-3 leading-snug">{step.title}</h3>
+                                <p className="text-gray-600 text-[15px] leading-relaxed">
+                                    {step.description}
+                                </p>
+                            </div>
+                        ))}
                     </div>
                 </div>
 
-                <div className="flex flex-wrap justify-center gap-6 mb-10 text-[15px]">
-                    <div className="flex items-center text-gray-700"><i className="icon-check text-[var(--primary)] mr-2"></i> Free Next day</div>
-                    <div className="flex items-center text-gray-700"><i className="icon-check text-[var(--primary)] mr-2"></i> Free stain treatment</div>
-                    <div className="flex items-center text-gray-700"><i className="icon-check text-[var(--primary)] mr-2"></i> Hypoallergenic detergent</div>
-                    <div className="flex items-center text-gray-700"><i className="icon-check text-[var(--primary)] mr-2"></i> Free evening delivery</div>
-                </div>
-
-                <div className="flex flex-col items-center">
-                    <button className="btn-primary mb-3">
-                        Get First Skip Free <i className="icon-arrow-right ml-2"></i>
-                    </button>
-                    <p className="text-gray-500 text-sm">Get your Sundays back</p>
+                <div className="text-center">
+                    <a href="plans.html" className="btn-primary">
+                        Get First Skip Free <div className="icon-arrow-right ml-2 text-xl font-bold"></div>
+                    </a>
                 </div>
             </div>
         </section>
     );
-};
+}

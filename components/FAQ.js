@@ -11,7 +11,7 @@ const FAQ = () => {
     const filters = ["Getting Started", "Pricing & Billing", "Your Laundry", "Scheduling & Delivery", "Account & Policies"];
 
     return (
-        <section className="py-24 bg-[#FAFAFA]">
+        <section className="py-[50px] bg-[#FAFAFA]">
             <div className="max-w-4xl mx-auto px-6">
                 <div className="text-center mb-12">
                     <p className="text-[12px] font-bold tracking-widest uppercase mb-4 text-gray-500">WE'VE HEARD IT ALL</p>
@@ -28,14 +28,19 @@ const FAQ = () => {
                     </div>
                 </div>
 
-                <div className="bg-gray-100 rounded-3xl p-4 md:p-8 space-y-2">
+                <div className="bg-gray-100 rounded-3xl p-4 md:p-8">
                     {questions.map((q, idx) => (
-                        <div key={idx} className="bg-transparent hover:bg-gray-200 transition-colors rounded-2xl px-6 py-5 flex justify-between items-center cursor-pointer">
-                            <span className="font-medium text-gray-800 text-base">{q}</span>
-                            <div className="w-8 h-8 rounded-full bg-[var(--primary)] flex items-center justify-center flex-shrink-0 text-black">
-                                <i className="icon-plus text-sm font-bold"></i>
+                        <React.Fragment key={idx}>
+                            <div className="bg-transparent hover:bg-gray-200 transition-colors rounded-2xl px-6 py-5 flex justify-between items-center cursor-pointer">
+                                <span className="font-medium text-gray-800 text-base">{q}</span>
+                                <div className="w-8 h-8 rounded-full bg-[var(--primary)] flex items-center justify-center flex-shrink-0 text-black">
+                                    <i className="icon-plus text-sm font-bold"></i>
+                                </div>
                             </div>
-                        </div>
+                            {idx < questions.length - 1 && (
+                                <div className="h-[1px] bg-gray-200 mx-6 my-1"></div>
+                            )}
+                        </React.Fragment>
                     ))}
                 </div>
             </div>
